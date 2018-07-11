@@ -105,7 +105,9 @@ namespace OWDemo
                         desc = match.Groups[1].Value;
                     }
 
-                    Console.WriteLine("({0}): {1}", i, desc);
+                    var addrs = string.Join(", ", dev.Addresses.Select(x => x.Address));
+
+                    Console.WriteLine("({0}): {1} - Address: {2}", i, desc, addrs);
                 }
             }
 
